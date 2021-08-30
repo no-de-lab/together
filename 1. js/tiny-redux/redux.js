@@ -12,8 +12,9 @@ export const createStore = (reducer) => {
 
     const dispatch = (action) => {
         if(!(action instanceof Action)) throw Error('action 은 Action 객체여야 한다')
-        state = reducer(state, action)}
-        publish()
+        state = reducer(state, action)
+        publish();
+    }
     return {getState, dispatch, subscribe};
 }
 
